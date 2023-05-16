@@ -3,11 +3,12 @@ class Player
   
   def guess=(user_input)
     puts 'What letter will you select?'
+
     @guess = gets.chomp
   end 
 
   def name=(user_input)
     puts 'What is your name?'
-    @name = gets.chomp
+    @name = gets.chomp.capitalize
   end
 end
