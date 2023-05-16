@@ -6,8 +6,8 @@ class Game
     @rounds = 6
   end
 
-  def convert_code(code_copy)
-    code_array = code.split('')
+  def convert_code(code)
+    code_array = code.scan(/[a-z]/)
     p code_array
   end
 end
