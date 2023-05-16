@@ -5,4 +5,9 @@ class Player
     puts 'What letter will you select?'
     @guess = gets.chomp
   end 
+
+  def name=(user_input)
+    puts 'What is your name?'
+    @name = gets.chomp
+  end
 end
