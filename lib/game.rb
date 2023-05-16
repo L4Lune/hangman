@@ -8,4 +8,6 @@ class Game
 
   def convert_code(code_copy)
     code_array = code.split('')
+    p code_array
+  end
 end
