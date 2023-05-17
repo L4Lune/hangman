@@ -8,7 +8,7 @@ class GameBoard
   end
 
   def code_array=(code)
-    @code_array = code.scan(/[a-z]/)
+    @code_array = self.code.scan(/[a-z]/)
     p code_array
   end
 
