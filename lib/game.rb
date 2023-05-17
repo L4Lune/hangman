@@ -1,9 +1,10 @@
 class Game
-  attr_accessor :code, :rounds, :code_array
+  attr_accessor :code, :rounds, :code_array, :code_board
   
   def initialize
     @code = File.readlines('google-10000-english-no-swears.txt').sample
     @code_array = []
+    @code_board = []
     @rounds = 6
   end
 
@@ -14,11 +15,14 @@ class Game
 
   def display_code_board(code_array)
     i = 0
-    code_board = []
-    until code_board.length == code_array.length do
-      code_board[i] == '_'
+    while i < self.code_array.length do
+      code_board[i] = '_'
       i+=1
     end
-    p code_board
+    puts code_board.join(' ')
+  end
+
+  def update_display
+
   end
 end
