@@ -12,11 +12,8 @@ class Game
     game_intro_prompt
     board.code_array=()
     board.create_code_board(board.code_array)
-    while rounds > 0
-      if board.code_array == board.code_board
-        puts "You've won the game!"
-        play_again
-      end
+    
+    while rounds > 0 || (board.code_array != board.code_board)
       board.code_board
       player.guess=()
       if board.code_array.include?(player.guess)
@@ -32,8 +29,7 @@ class Game
     puts "Do you want to play again?"
     input = gets.chomp
     if input != 'y' || input != 'yes'
-
-      break 
+      puts "Thanks for playing!" 
     else
       Game.new.play
     end
