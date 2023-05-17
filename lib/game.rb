@@ -10,14 +10,16 @@ class Game
 
   def play
     game_intro_prompt
-    while game.rounds > 0
-      board.create_code_board(board.code_array)
+    board.code_array=()
+    board.create_code_board(board.code_array)
+    while rounds > 0
       board.code_board
       player.guess=()
       if board.code_array.include?(player.guess)
-        board.update_code_board
+        board.update_code_board(player.guess)
       else
         self.rounds -= 1
+        puts "Attempts left : #{rounds}"
       end
     end
   end
