@@ -22,7 +22,14 @@ class Game
     puts code_board.join(' ')
   end
 
-  def update_display
-
+  def update_code_board(user_guess)
+    code_array.each_with_index do |letter, index|
+      if code_array[index].include?(user_guess)
+        self.code_board[index] = user_guess
+      else
+        code_board
+      end
+    end
+    puts code_board.join(' ')
   end
 end
