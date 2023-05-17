@@ -1,11 +1,10 @@
 class GameBoard
-  attr_accessor :code, :rounds, :code_array, :code_board
+  attr_accessor :code, :code_array, :code_board
   
   def initialize
     @code = File.readlines('google-10000-english-no-swears.txt').sample
     @code_array = []
     @code_board = []
-    @rounds = 6
   end
 
   def code_array=(code)
@@ -13,7 +12,7 @@ class GameBoard
     p code_array
   end
 
-  def display_code_board(code_array)
+  def create_code_board(code_array)
     i = 0
     while i < self.code_array.length do
       code_board[i] = '_'
