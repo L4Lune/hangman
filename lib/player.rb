@@ -14,7 +14,7 @@ class Player
       guess=()
     else user_input.length == 1 && user_input.match(/[a-z]/)
       @guess = user_input
-      p guess
+      p self.guess
     end
   end 
 
